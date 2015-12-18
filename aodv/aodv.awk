@@ -1,0 +1,80 @@
+BEGIN {
+
+SeqNo = -1;
+
+dPackets = 0;
+
+rPackets = 0;
+
+count = 0;
+
+tPacket = 0;
+}
+
+{
+
+#Number of Sent Packet/received packet/Droped Packet
+
+	if($4 == "RTR" && $1 == "s" && SeqNo < $6) {
+		SeqNo = $6;
+		tPacket++;
+	} 
+	else if(($4 == "RTR") && ($1 == "r")) {
+		rPackets++;
+	}
+	else if ($1 == "D"){
+		dPackets++;
+	}
+
+#end-to-end delay
+
+	if($4 == "RTR" && $1 == "s") {
+
+		start_time[$6] = $2;
+
+	} 
+	else if($1 == "r") {
+
+		end_time[$6] = $2;
+
+	} 
+	else if($1 == "D") {
+
+		end_time[$6] = -1;
+
+	}
+
+    }
+
+
+
+END {
+
+for(i=0; i<=SeqNo; i++) {
+
+	if(end_time[i] > 0) {
+		delay[i] = end_time[i] - start_time[i];
+		count++;
+	}
+	else{
+		delay[i] = -1;
+
+	}
+}
+count = 22;
+for(i=0; i<count; i++) {
+
+	if(delay[i] > 0) {
+
+		end_to_end_delay = end_to_end_delay + delay[i];
+
+	}
+}
+
+end_to_end_delay = end_to_end_delay/count;
+
+print end_to_end_delay * 1000 ,dPacket/tPacket;
+
+#print "\n";
+
+}

@@ -1,0 +1,70 @@
+
+
+Total Dropped Packets = 3236
+Drop rate = 25
+Average End-to-End Delay = 0.138018 ms
+
+
+
+
+Total Dropped Packets = 2827
+Drop rate = 19
+Average End-to-End Delay = 0.110168 ms
+
+
+
+
+Total Dropped Packets = 3230
+Drop rate = 247
+Average End-to-End Delay = 10.1282 ms
+
+
+
+
+Total Dropped Packets = 3154
+Drop rate = 145
+Average End-to-End Delay = 0.138049 ms
+
+
+
+
+Total Dropped Packets = 2778
+Drop rate = 25
+Average End-to-End Delay = 0.107941 ms
+
+
+
+
+Total Dropped Packets = 2678
+Drop rate = 243
+Average End-to-End Delay = 10.326 ms
+
+
+
+
+Total Dropped Packets = 3246
+Drop rate = 16
+Average End-to-End Delay = 0.142076 ms
+
+
+
+
+Total Dropped Packets = 2806
+Drop rate = 22
+Average End-to-End Delay = 0.114203 ms
+
+
+
+
+Total Dropped Packets = 2935
+Drop rate = 18
+Average End-to-End Delay = 0.110136 ms
+
+
+
+
+Total Dropped Packets = 3494
+Drop rate = 24
+Average End-to-End Delay = 0.122068 ms
+
+

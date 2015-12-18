@@ -1,0 +1,9 @@
+#!/bin/bash
+
+number=0
+until [ $number -ge 10 ]; do
+    echo "Simulation no: $number"
+    ns try3.tcl
+    awk -f aodv.awk aodv.tr>> new.txt
+    number=$((number + 1))
+done
